@@ -1,0 +1,13 @@
+- name: Download Keycloak
+  get_url:
+     url: https://github.com/keycloak/keycloak/releases/download/20.0.1/keycloak-20.0.1.zip
+     dest: /tmp
+- name: unzip file
+  unarchive:
+     src: /tmp/keycloak-20.0.1.zip
+     dest: /opt
+     remote_src: yes
+- name: create Keycloak Adminuser
+   #path: /opt/keycloak-20.0.1/bin
+  shell: export KEYCLOAK_ADMIN=keyadmin
+  shell: export KEYCLOAK_ADMIN_PASSWORD=keypass
