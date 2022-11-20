@@ -45,10 +45,10 @@
 - name: Restart mysql service
   service: name=mysql state=restarted
 
-- name: change Config - DBMARIA
-  template:                 # Ansible template module
-    src: "50-server.cnf"     # This is template src i.e source location 
-    dest: "/etc/mysql/mariadb.conf.d/50-server.cnf"   # Destination of Remote h
-    owner: root
-    group: root
-    mode: 0750
+#- name: change Config - DBMARIA
+ # template:                 # Ansible template module
+ #   src: "50-server.cnf"     # This is template src i.e source location 
+ #   dest: "/etc/mysql/mariadb.conf.d/50-server.cnf"   # Destination of Remote h
+ #   owner: root
+ #   group: root
+ #   mode: 0750
