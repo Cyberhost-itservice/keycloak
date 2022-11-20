@@ -1,0 +1,13 @@
+- name: change Config - Keycloak
+  template:                 # Ansible template module
+    src: "keycloak.conf.j2"     # This is template src i.e source location 
+    dest: "/opt/keycloak-20.0.1/conf/keycloak.conf"   # Destination of Remote host
+   # src: "50-server.cnf.j2"     # This is template src i.e source location 
+   # dest: "/etc/mysql/mariadb.conf.d/50-server.cnf"   # Destination of Remote host
+    
+
+
+#- name: Change Config - Mariadbcnf
+#  template:                 # Ansible template module
+#    src: "50-server.cnf.j2"     # This is template src i.e source location 
+#    dest: "/etc/mysql/mariadb.conf.d/50-server.cnf"   # Destination of Remote host
