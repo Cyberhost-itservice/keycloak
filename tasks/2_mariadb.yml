@@ -1,0 +1,54 @@
+- name: Install MariaDB Server 10.3
+  apt: name=mariadb-server state=latest
+        
+- name: Install MariaDB Client 10.3
+  apt: name=mariadb-client state=latest
+
+- name: Restart MariaDB 10.3
+  service: name=mysql state=restarted
+
+- name: Create a new database with name 'KEYCLOAK DATABASE'
+  mysql_db:
+    name: keydata
+    state: present
+
+- name: Create user with password, all database privileges and 'WITH GRANT OPTION' in KEYDATA
+  community.mysql.mysql_user:
+    state: present
+    name: keyadmin
+    password: keypass
+    priv:
+      'keydata.*': 'ALL,GRANT'
+
+- name: Create replication account
+  community.mysql.mysql_user:
+    state: present
+    name: repl
+    password: s3cr3tPaSSwordR
+    priv:
+      '*.*': 'REPLICATION SLAVE'
+
+- name: Create readwrite user
+  community.mysql.mysql_user:
+    state: present
+    name: rwuser
+    password: s3cr3tPaSSwordR
+    priv:
+      '*.*': 'SELECT,INSERT,UPDATE,DELETE,CREATE,DROP'
+
+#- name: Modify configuration file to listen on all interfaces
+#  lineinfile: dest=/etc/mysql/my.cnf regexp="^bind-address" line="bind-address=0.0.0.0"
+
+- name: Modify configuration file to setup server ID
+  lineinfile: dest=/etc/mysql/my.cnf regexp="^server-id" line="server-id=1"
+
+- name: Restart mysql service
+  service: name=mysql state=restarted
+
+- name: change Config - DBMARIA
+  template:                 # Ansible template module
+    src: "50-server.cnf"     # This is template src i.e source location 
+    dest: "/etc/mysql/mariadb.conf.d/50-server.cnf"   # Destination of Remote h
+    owner: root
+    group: root
+    mode: 0750
