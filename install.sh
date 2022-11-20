@@ -11,4 +11,4 @@ sed -i "188s/# command_warnings = False/command_warnings = False/1" /etc/ansible
 ansible-galaxy collection install community.mysql
 ansible-galaxy collection install community.general 
 ansible-galaxy collection install community.crypto
-ansible-pull -U https://code.hattec.de/git/alexander.lewrick/Ansible-Keycloak20.git
+ansible-pull -U https://github.com/Cyberhost-itservice/keycloak.git
