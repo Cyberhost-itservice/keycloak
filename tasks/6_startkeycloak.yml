@@ -1,0 +1,4 @@
+- name: start keycloak 
+  command: sh /opt/keycloak-20.0.1/bin/kc.sh
+  #command: ./kc.sh build
+  #command: ./kc.sh start
