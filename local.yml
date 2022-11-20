@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  connection: local
+  become: true
+
+  tasks:
+    - include: tasks/1_Packages.yml
+    - include: tasks/2_mariadb.yml
+   # - include: tasks/2.2_mariadbtest.yml
+    - include: tasks/3_Keycloak.yml
+    - include: tasks/4_openssl.yml
+    #- include: tasks/5_keyconfig.yml
+    - include: tasks/5keycon.yml
+    #- include: tasks/6_startkeycloak.yml
+    #- include: tasks/4setpass.yml
