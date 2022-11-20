@@ -1,4 +1,5 @@
 #! /bin/bash
+# create a file on a locamachine with a name in.sh and chmod +x this file. start the file with ./in.sh 
 # when live system 
 #sed -i 's/main/main universe multiverse/g' /etc/apt/sources.list
 #	echo "deb http://"${LOCAL_CACHE:+${LOCAL_CACHE}/}"de.archive.ubuntu.com/ubuntu/ focal-updates main universe multiverse" >> /etc/apt/sources.list
