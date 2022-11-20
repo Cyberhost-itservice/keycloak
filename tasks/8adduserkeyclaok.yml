@@ -1,0 +1,36 @@
+- name: config keycloak 
+  stat:
+    path: /opt/keycloak-20.0.1/bin
+
+- name: create Keycloak Adminuser
+  shell: export KEYCLOAK_ADMIN=keyadmin
+  shell: export KEYCLOAK_ADMIN_PASSWORD=keypass
+  #shell: cd /opt/keycloak-20.0.1/bin
+  #shell: ./kc.sh start-dev
+#- name: Create Certifict Folder
+#  shell: mkdir /etc/ssl/crt
+#         mkdir /etc/ssl/csr
+#         mkdir /etc/ssl/challenges
+
+#- name: Generate a Let's Encrypt Certificate
+  #openssl_certificate:
+    #path: /etc/ssl/crt/ansible.com.crt
+    #csr_path: /etc/ssl/csr/ansible.com.csr
+    #provider: acme
+    #acme_accountkey_path: /etc/ssl/private/ansible.com.pem
+    #acme_challenge_path: /etc/ssl/challenges/ansible.com/
+
+
+- name: Create private key (RSA, 4096 bits)
+  openssl_privatekey:
+    path: /etc/ssl/private/certificate.key
+
+#- name: Generate an Entrust certificate via the Entrust Certificate Services (ECS) API
+#  crypto.x509_certificate:
+#    path: /etc/ssl/crt/ansible.com.crt
+#    csr_path: /etc/ssl/csr/ansible.com.csr
+#    provider: entrust
+#    entrust_requester_name: Jo Doe
+#    entrust_requester_email: jdoe@ansible.com
+#    entrust_requester_phone: 555-555-5555
+#    entrust_cert_type: STANDARD_SSL
