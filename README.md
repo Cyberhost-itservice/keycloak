@@ -3,7 +3,7 @@ keycloak+mariadb \
 For install : ansible-pull https://github.com/Cyberhost-itservice/keycloak.git \
 This is a Install from Keycloak about ansible. \
 System: Ubuntu 20.04 Server and Ubuntu live System \
-Set IP in Template/keycloak.conf.j2 of our ip . \
+Set IP in templates/keycloak.conf.j2 of our ip . \
 \
 this is not finish \
 \
