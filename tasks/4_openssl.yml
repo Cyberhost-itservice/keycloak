@@ -1,0 +1,15 @@
+- openssl_privatekey:
+    path: /home/key.pem
+    size: 4096
+
+- openssl_privatekey:
+    path: /home/cert.pem
+    size: 4096
+
+#- name: Generate a Let's Encrypt Certificate
+ # openssl_certificate:
+  #  path: /etc/ssl/crt/keycl.crt
+  #  csr_path: /etc/ssl/csr/keycl.csr
+  #  provider: acme
+  #  acme_accountkey: /etc/ssl/private/keycl.pem
+  #  acme_challenge_path: /etc/ssl/challenges
