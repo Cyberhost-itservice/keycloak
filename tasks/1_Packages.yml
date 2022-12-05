@@ -15,7 +15,7 @@
    # - mariadb-common
     - openjdk-17-jre-headless
     - unzip 
-    - python3
-    - python3-pip
-    - python3-mysqldb
+    #- python3
+    #- python3-pip
+    #- python3-mysqldb
     # - python-mysqldb
