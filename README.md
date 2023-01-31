@@ -1,9 +1,6 @@
 # Install Keycloak 20.0.3 with Postgresql 12 on Ubuntu 20.0.4
 
-1. Pull: ansible-pull -U https://github.com/Cyberhost-itservice/keycloak.git There are two main components of Keycloak:
-
-    Keycloak server, including the API and graphical interface.
-    Keycloak application adapter: a set of libraries to call the server.
+1. Pull: ansible-pull -U https://github.com/Cyberhost-itservice/keycloak.git 
 2. Please change the Ip Address in keycloak.conf to our IP Address. ( /opt/keycloak-20.0.3/conf/keycloak.conf ) 
 3. visit Url: https://our_ip:8443
 4. In the export.sh File can you change the Name and Passowrt for Keycloak ( Standart is sed: USER: keyadmin ; Pass: keypass ) 
