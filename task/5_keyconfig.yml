@@ -5,7 +5,7 @@
 
     - name: Download export.sh
       template:
-        src: "/script/export.sh"
+        src: "script/export.sh"
         dest: "/home/"
 
     - name: Script
