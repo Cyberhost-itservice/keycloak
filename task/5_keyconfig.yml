@@ -3,7 +3,12 @@
         src: "keycloak.conf.j2"      
         dest: "/opt/keycloak-20.0.3/conf/keycloak.conf"
 
+    - name: Download export.sh
+      template:
+        src: "export.sh"
+        dest: "/home/
+
     - name: Script
       shell: bash export.sh
       args:
-        chdir: /etc/ansible
+        chdir: /home
