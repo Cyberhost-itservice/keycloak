@@ -1,0 +1,22 @@
+    - name: Install postgresql and postgresql-contrib
+      apt:
+        name:
+        - postgresql
+        - postgresql-contrib
+        state: present
+
+    - name: Create postgres user
+      postgresql_user:
+        state: present
+        name: "{{ postgres_user }}"
+        password: "{{ postgres_password }}"
+      become: true
+      become_user: postgres
+
+
+    - name: Create postgres database
+      postgresql_db:
+        state: present
+        name: "{{ postgres_db }}"
+      become: true
+      become_user: postgres
