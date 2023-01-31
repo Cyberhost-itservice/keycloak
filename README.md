@@ -3,4 +3,3 @@
 ansible-pull -U https://github.com/Cyberhost-itservice/keycloak.git \
 Url: https://our_ip:8443 \
 
-when 
