@@ -1,0 +1,27 @@
+    - name: Install OpenSSL
+      apt:
+        name: openssl
+        state: present
+
+    - name: Create OpenSSL configuration file
+      copy:
+        dest: /etc/ssl/openssl.cnf
+        content: |
+          [ req ]
+          default_bits = 2048
+          prompt = no
+          default_md = sha256
+          distinguished_name = dn
+          [ dn ]
+          C=US
+          ST=California
+          L=San Francisco
+          O=OpenAI
+          CN = OpenAI
+          [ v3_req ]
+          subjectAltName = @alt_names
+          [ alt_names ]
+          DNS.1 = OpenAI                    
+    - name: Generate SSL certificate with specified subject
+      shell: |
+                                openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout /opt/keycloak-20.0.3/cert/key.pem -out /opt/keycloak-20.0.3/cert/cert.pem -subj "{{ subject }}"
