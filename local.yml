@@ -3,7 +3,7 @@
   connection: local
   become: true
   vars_files: 
-    - task/v.yml
+    - task/vars/v.yml
 
   tasks:
     - include: task/1_pack.yml
