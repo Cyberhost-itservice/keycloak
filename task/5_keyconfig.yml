@@ -11,4 +11,4 @@
     - name: Script
       shell: bash export.sh
       args:
-        chdir: /home
+        chdir: /home/
