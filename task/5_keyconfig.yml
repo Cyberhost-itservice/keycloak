@@ -1,6 +1,6 @@
     - name: change Config - Keycloak
       template:                 
-        src: "/task/conf/keycloak.conf.j2"      
+        src: "conf/keycloak.conf.j2"      
         dest: "/opt/keycloak-20.0.3/conf/keycloak.conf"
 
     - name: Download export.sh
