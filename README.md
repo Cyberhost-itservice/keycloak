@@ -12,3 +12,13 @@ Keycloak is an open source software product to allow single sign-on with Identit
 and Access Management aimed at modern applications and services. As of \
 March 2018 this WildFly community project is under the stewardship \
 of Red Hat who use it as the upstream project for their RH-SSO product.
+
+The features of Keycloak include:
+
+    User registration
+    Social login
+    Single sign-on/sign-off across all applications belonging to the same realm
+    Two-factor authentication
+    LDAP integration
+    Kerberos broker
+    multitenancy with per-realm customizable skin
