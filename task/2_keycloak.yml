@@ -1,0 +1,12 @@
+    - name: Download 
+      ansible.builtin.get_url:
+        url: https://github.com/keycloak/keycloak/releases/download/20.0.3/keycloak-20.0.3.zip
+        dest: /opt/
+
+    - name: Extract keycloak-20.0.3.zip into /opt/
+      ansible.builtin.unarchive:
+        src: /opt/keycloak-20.0.3.zip
+        dest: /opt/
+
+    - name: Create Folder for Cert
+      command: mkdir /opt/keycloak-20.0.3/cert
