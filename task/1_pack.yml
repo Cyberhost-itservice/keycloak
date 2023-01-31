@@ -1,0 +1,12 @@
+- name: Update apt package index
+  apt:
+   update_cache: true
+      
+- name: Install openjdk-11-jre-headless, wget and unzip
+  apt:
+    name:
+    - openjdk-11-jre-headless
+    - wget
+    - unzip
+    - python3-psycopg2
+    state: present
