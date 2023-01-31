@@ -3,7 +3,7 @@
   connection: local
   become: true
   vars_files: 
-    - ansible/v.yml
+    - task/v.yml
 
   tasks:
     - include: task/1_pack.yml
