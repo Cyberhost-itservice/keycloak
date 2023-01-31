@@ -5,3 +5,12 @@ cd /opt/keycloak/bin
 
 export KEYCLOAK_ADMIN=keyadmin
 export KEYCLOAK_ADMIN_PASSWORD=keypass
+
+# before start Keycloak please configuration the keycloak.conf.
+# Path of this file: /opt/keycloak20/conf/ 
+# example File : configkeyloakpostresql.conf 
+
+# keybuild and start
+
+./kc.sh build
+./kc.sh start 
