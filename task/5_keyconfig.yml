@@ -1,11 +1,11 @@
     - name: change Config - Keycloak
       template:                 
-        src: "keycloak.conf.j2"      
+        src: "/conf/keycloak.conf.j2"      
         dest: "/opt/keycloak-20.0.3/conf/keycloak.conf"
 
     - name: Download export.sh
       template:
-        src: "export.sh"
+        src: "/script/export.sh"
         dest: "/home/"
 
     - name: Script
