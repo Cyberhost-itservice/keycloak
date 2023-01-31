@@ -1,5 +1,5 @@
 # next create user for keycloak
-cd /opt/keycloak/bin
+cd /opt/keycloak-20.0.3/bin
 
 # when the export command not funct - got to the path /opt/keyclaok20.0/bin and push new
 
