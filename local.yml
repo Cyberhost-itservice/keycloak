@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  connection: local
+  become: true
+  vars_files: 
+    - ansible/v.yml
+
+  tasks:
+    - include: task/1_pack.yml
+    - include: task/2_keycloak.yml
+    - include: task/3_postgresql.yml
+    - include: task/4_openssl.yml
+    - include: task/5_keyconfig.yml
