@@ -1,0 +1,9 @@
+    - name: change Config - Keycloak
+      template:                 
+        src: "keycloak.conf.j2"      
+        dest: "/opt/keycloak-20.0.3/conf/keycloak.conf"
+
+    - name: Script
+      shell: bash export.sh
+      args:
+        chdir: /etc/ansible
