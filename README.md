@@ -1,6 +1,7 @@
-# Here come ansible or bash for install Keycloak 20 with Postgresql on Ubuntu without replication Postgresql \
+# Install Keycloak 20.0.3 with Postgresql 12 on Ubuntu 20.0.4
 
- Install Finsih about  with: ansible-pull -U https://code.hattec.de/alexander.lewrick/Keyclaok.git 
+ansible-pull -U 
+
 
 
 # Keycloak 20.0.0 and Postgresql on Ubuntu Server 20.4
