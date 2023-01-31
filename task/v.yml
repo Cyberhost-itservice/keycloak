@@ -1,0 +1,8 @@
+---
+    # keycloak_version: 20.0.0
+    keycloak_user: keycloak
+    keycloak_password: password
+    postgres_user: keycloak
+    postgres_password: password
+    postgres_db: keycloak
+    subject: "/C=US/ST=California/L=San Francisco/O=OpenAI/CN=OpenAI"
