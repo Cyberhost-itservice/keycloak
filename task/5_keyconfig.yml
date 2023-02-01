@@ -1,11 +1,7 @@
-    - name: change Config - Keycloak
+    - name: Download Config - Keycloak
       template:                 
         src: "conf/keycloak.conf.j2"      
         dest: "/opt/keycloak-20.0.3/conf/keycloak.conf"
-        
-    - name: Change conf
-      shell: bash changeip.sh
-        chdir: /home/
         
     - name: Download changeip
       template:
