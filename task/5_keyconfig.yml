@@ -12,13 +12,9 @@
         src: "script/export.sh"
         src: "script/changeip.sh
         dest: "/home/"
-
+        
     - name: Script
       shell: bash changeip.sh
-      args:
-        chdir: /home/
-
-    - name: Script
       shell: bash export.sh
       args:
         chdir: /home/
