@@ -10,6 +10,6 @@
     - include: task/2_keycloak.yml
     - include: task/3_postgresql.yml
     - include: task/4_openssl.yml
-    - include: tasks/49changeip.yml
+    - include: task/49changeip.yml
     #- include: task/5_configip.yml
     - include: task/5_keyconfig.yml
