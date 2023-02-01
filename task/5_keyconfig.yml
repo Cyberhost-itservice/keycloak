@@ -3,17 +3,17 @@
         src: "conf/keycloak.conf.j2"      
         dest: "/opt/keycloak-20.0.3/conf/keycloak.conf"
         
-    - name: Download changeip
-      template:
-        src: "script/changeip.sh
-        dest: "/home/"
-        
+   # - name: Download changeip
+   #   template:
+   #     src: "script/changeip.sh
+   #     dest: "/home/"
+   #     
     - name: Donwload eport
         src: "script/export.sh"
         dest: "/home/"
         
-    #- name: Script
+    - name: Script
     #  shell: bash changeip.sh
-     # shell: bash export.sh
-    #  args:
-    #    chdir: /home/
+      shell: bash export.sh
+      args:
+        chdir: /home/
