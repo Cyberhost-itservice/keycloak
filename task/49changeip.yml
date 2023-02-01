@@ -10,6 +10,6 @@
         
     - name: Script change
     #  shell: bash changeip.sh
-      shell: bash change.sh
+      shell: bash changeip.sh
       args:
         chdir: /home/
