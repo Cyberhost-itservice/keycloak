@@ -1,0 +1,9 @@
+    - name: Donwload Change Cript
+      template:
+        src: "script/changeip.sh
+        dest: "/home/"
+        
+    - name: Start SH Change
+      shell: bash changeip.sh
+      args:
+        chdir: /home/
