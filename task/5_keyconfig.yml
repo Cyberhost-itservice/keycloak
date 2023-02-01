@@ -2,12 +2,7 @@
       template:                 
         src: "conf/keycloak.conf.j2"      
         dest: "/opt/keycloak-20.0.3/conf/keycloak.conf"
-           
-    - name: Download Changeconf Script
-      template:
-        src: "script/changeip.sh
-        dest: "/home/"
-       
+        
     - name: Change conf
       shell: bash changeip.sh
         chdir: /home/
@@ -15,7 +10,13 @@
     - name: Download export.sh
       template:
         src: "script/export.sh"
+        src: "script/changeip.sh
         dest: "/home/"
+
+    - name: Script
+      shell: bash changeip.sh
+      args:
+        chdir: /home/
 
     - name: Script
       shell: bash export.sh
