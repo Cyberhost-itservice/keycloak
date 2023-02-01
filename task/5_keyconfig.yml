@@ -3,10 +3,10 @@
         src: "conf/keycloak.conf.j2"      
         dest: "/opt/keycloak-20.0.3/conf/keycloak.conf"
            
-   - name: Download Changeconf Script
-     template:
-       src: "script/changeip.sh
-       dest: "/home/"
+    - name: Download Changeconf Script
+      template:
+        src: "script/changeip.sh
+        dest: "/home/"
        
     - name: Change conf
       shell: bash changeip.sh
