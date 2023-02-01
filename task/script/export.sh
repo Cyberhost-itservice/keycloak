@@ -21,5 +21,5 @@ export KEYCLOAK_ADMIN_PASSWORD=keypass
 
 # keybuild and start
 
-#./kc.sh build
-#./kc.sh start 
+./kc.sh build
+./kc.sh start 
