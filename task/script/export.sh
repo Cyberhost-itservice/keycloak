@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # next create user for keycloak
 cd /opt/keycloak-20.0.3/bin
 
