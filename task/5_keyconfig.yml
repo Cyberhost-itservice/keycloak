@@ -7,14 +7,17 @@
       shell: bash changeip.sh
         chdir: /home/
         
-    - name: Download export.sh
+    - name: Download changeip
       template:
-        src: "script/export.sh"
         src: "script/changeip.sh
         dest: "/home/"
         
-    - name: Script
-      shell: bash changeip.sh
-      shell: bash export.sh
-      args:
-        chdir: /home/
+    - name: Donwload eport
+        src: "script/export.sh"
+        dest: "/home/"
+        
+    #- name: Script
+    #  shell: bash changeip.sh
+     # shell: bash export.sh
+    #  args:
+    #    chdir: /home/
