@@ -3,12 +3,13 @@
        src: "conf/keycloak.conf.j2"      
        dest: "/opt/keycloak-20.0.3/conf/keycloak.conf"
    
-   - name: Donwload Change Cript
-     template:
-        src: "script/changeip.sh
+    - name: Donwload Change
+      template:
+        src: "script/changeip.sh"
         dest: "/home/"
         
-    - name: Start SH Change
-      shell: bash changeip.sh
+    - name: Script change
+    #  shell: bash changeip.sh
+      shell: bash change.sh
       args:
         chdir: /home/
