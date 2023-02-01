@@ -3,25 +3,14 @@
         src: "conf/keycloak.conf.j2"      
         dest: "/opt/keycloak-20.0.3/conf/keycloak.conf"
            
-    - name: Get IP address
-      shell: hostname -I
-      register: ip_address
-
-    - name: Update ip in keycloak.conf
-      lineinfile:
-        dest: /opt/keycloak-20.0.3/conf/keycloak.conf
-        line: "ip = {{ ip_address.stdout_lines[0].strip() }}"
-        state: present
-        backrefs: yes
-        regexp: "^ip = .*$"
-
-    - name: Update hostname in keycloak.conf
-      lineinfile:
-        dest: /opt/keycloak-20.0.3/conf/keycloak.conf
-        line: "hostname = {{ ip_address.stdout_lines[0].strip() }}"
-        state: present
-        backrefs: yes
-        regexp: "^hostname = .*$"
+   - name: Download Changeconf Script
+     template:
+       src: "script/changeip.sh
+       dest: "/home/"
+       
+    - name: Change conf
+      shell: bash changeip.sh
+        chdir: /home/
         
     - name: Download export.sh
       template:
