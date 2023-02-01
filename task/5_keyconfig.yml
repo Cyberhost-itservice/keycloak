@@ -9,6 +9,7 @@
    #     dest: "/home/"
    #     
     - name: Donwload eport
+      template:
         src: "script/export.sh"
         dest: "/home/"
         
