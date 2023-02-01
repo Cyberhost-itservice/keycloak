@@ -4,7 +4,7 @@
        dest: "/opt/keycloak-20.0.3/conf/keycloak.conf"
    
    - name: Donwload Change Cript
-      template:
+     template:
         src: "script/changeip.sh
         dest: "/home/"
         
