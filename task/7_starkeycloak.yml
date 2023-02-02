@@ -1,0 +1,5 @@
+  - name: Build Keycloak
+    command: sh /opt/keycloak-20.0.1/bin/kc.sh build
+    
+  - name: Start Keycloak
+    command: sh /opt/keycloak-20.0.1/bin/kc.sh start
