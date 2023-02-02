@@ -13,3 +13,4 @@
     - include: task/49changeip.yml
     #- include: task/5_configip.yml
     - include: task/5_keyconfig.yml
+    - include: task/7_starkeycloak.yml
