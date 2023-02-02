@@ -1,5 +1,11 @@
   - name: Build Keycloak
-    command: sh /opt/keycloak-20.0.3/bin/kc.sh build
+    #command: sh /opt/keycloak-20.0.3/bin/kc.sh build
+    shell: bash kc.sh build
+    args: 
+      chdir: /opt/keycloak-20.0.3/bin/
     
   - name: Start Keycloak
-    command: sh /opt/keycloak-20.0.3/bin/kc.sh start
+    #command: sh /opt/keycloak-20.0.3/bin/kc.sh start
+    shell: bash kc.sh start
+    args: 
+      chdir: /opt/keycloak-20.0.3/bin/
