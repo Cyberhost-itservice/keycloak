@@ -1,0 +1,1 @@
+Install about bash script
