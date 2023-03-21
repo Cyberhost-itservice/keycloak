@@ -6,7 +6,7 @@ Install about bash script
 2. Configure the Keycloak.conf
 3. configure the Cache-ispn.xml ( change the IP Adresse )
 4. and run with command: ./kc.sh start --cache-config-file=/opt/keycloak/conf/cache-ispn.xml --cache=local
-6. Config the Cache-ispn.xml file for the Machine in the Cluster
+
 
 Keycloak:
 
