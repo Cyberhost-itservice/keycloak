@@ -1,6 +1,6 @@
 Install about bash script
 
-# Install Keycloak 20.0.3 with Postgresql 12 on Ubuntu 20.0.4
+# Install Keycloak 21 with Postgresql 12 on Ubuntu 20.0.4
 
 1. Pull: ansible-pull -U https://code.hattec.de/alexander.lewrick/Keyclaok.git
 2. Before you start please change the Ip Address in keycloak.conf to our IP Address. ( /opt/keycloak-20.0.3/conf/keycloak.conf ) 
