@@ -6,9 +6,9 @@ sudo apt-get install -y openjdk-11-jre-headless
 sudo apt-get install -y wget 
 sudo apt-get install -y unzip 
 cd /opt
-wget https://github.com/keycloak/keycloak/releases/download/21.0.1/keycloak-21.0.1.zip
-sudo unzip keycloak-21.0.1.zip
-mv /opt/keycloak-21.0.1 /opt/keycloak
+wget https://github.com/keycloak/keycloak/releases/download/21.0.1/keycloak-21.1.1.zip
+sudo unzip keycloak-21.1.1.zip
+mv /opt/keycloak-21.1.1 /opt/keycloak
 #sudo ln -s /opt/keycloak-20.0.0 /opt/keycloak
 
 # Install Postgres
