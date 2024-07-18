@@ -4,6 +4,7 @@
 1. Pull: ansible-pull -U https://github.com/Cyberhost-itservice/keycloak.git 
 2. visit Url: https://our_ip:8443
 3. In the export.sh File can you change the Name and Passowrt for Keycloak ( Standart is sed: USER: keyadmin ; Pass: keypass ) 
+( https://github.com/keycloak/keycloak ) for more infos
 
 Keycloak:
 
