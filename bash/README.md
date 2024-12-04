@@ -1,6 +1,6 @@
 Install about bash script
 
-# Install Keycloak 21 with Postgresql 12 on Ubuntu 20.0.4
+# Install Keycloak 26.0.7 with Postgresql 12 on Ubuntu 20.0.4
 
 1. Copy the Bash script and run
 2. Configure the Keycloak.conf
