@@ -4,11 +4,11 @@
 
 #ipadr=$(hostname -I)
 #echo $ipadr 
-#sed -i '26s/.*/'ip="$ipadr"'/' /opt/keycloak-20.0.3/conf/keycloak.conf
-#sed -i '41s/.*/'hostname="$ipadr"'/' /opt/keycloak-20.0.3/conf/keycloak.conf
+#sed -i '26s/.*/'ip="$ipadr"'/' /opt/keycloak-26.0.7/conf/keycloak.conf
+#sed -i '41s/.*/'hostname="$ipadr"'/' /opt/keycloak-26.0.7/conf/keycloak.conf
 
 # next create user for keycloak
-cd /opt/keycloak-20.0.3/bin
+cd /opt/keycloak-26.0.7/bin
 
 # when the export command not funct - got to the path /opt/keyclaok20.0/bin and push new
 
